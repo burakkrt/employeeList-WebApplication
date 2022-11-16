@@ -23,15 +23,15 @@ Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygula
 - [Javascript](https://www.javascript.com)
 - [Bootstrap](https://getbootstrap.com)
 
-## Yardımcı Kaynaklar
-- [W3School](https://www.w3schools.com)
-- [Colorhunt](https://colorhunt.co)
-- [Stackoverflow](https://stackoverflow.com)
-
 ## Projeden Görüntüler
 ![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
 ![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
 ![QuizBox Projesinden Bir Görüntü](screenshootApp2.png)
+
+## Yardımcı Kaynaklar
+- [W3School](https://www.w3schools.com)
+- [Colorhunt](https://colorhunt.co)
+- [Stackoverflow](https://stackoverflow.com)
 
 ## License
 - #### MIT
