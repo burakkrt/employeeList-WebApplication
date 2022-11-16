@@ -1,0 +1,536 @@
+// Small devices landscape phones
+@media (max-width: 575px){
+
+    html{
+        font-size: 59%;
+    }
+    body{
+        padding-left: 0;
+    }
+    .container{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .employees{
+        grid-template-columns: repeat(1 , 1fr);
+        gap: 2rem;
+        min-height: auto;
+        padding: 6rem 0 3rem 0;
+    }
+    .person-card{
+        margin:0 auto;
+        border: 2px solid $color-cream;
+        height: 450px;
+        width: 300px;
+        box-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+        &-header{
+            height: 45%;
+        }
+    }
+    
+    .about-me-header{
+        bottom: 3%;
+        right: 10px;
+
+        img{
+            width: 60px;
+        }
+        button{
+            font-size: 1.2rem;
+            width: 90px;
+            height: 25px;
+        }
+    }
+
+    .container{
+        .filter-content{
+            &.about-content{
+        
+                .about-h3{
+                    font-size: 1.6rem;
+                }
+        
+                .about-content-header{
+        
+                    .me{
+                        flex-direction: column;
+                        justify-content: center;
+                        margin: 3rem 0;
+        
+                        p{
+                            width: 100%;
+                            margin-bottom: 2rem;
+                        }
+        
+                        .my-image{
+                            width: 100%;
+        
+                            img{
+                                width: 100%;
+                                box-shadow: none;
+                            }
+                        }
+                        
+                    }
+                }
+        
+                .about-content-main{
+        
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+        
+                    .project-desc{ 
+                        width: 100%;
+                        ul{
+                            margin: 25px 0;
+                        }
+                        
+                        p{
+                            margin: 15px 0;
+                        }
+                        
+                    }
+        
+                    .project-technical-desc{
+                        width: 100%;
+        
+                        ul{
+                            padding-left: 30px;
+                        }
+                        p{
+                            margin: 15px 0;
+                        }
+                    
+                    }    
+                }
+        
+                .about-content-footer{
+                    margin-top: 35px;
+                    padding: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: transparent;
+        
+                    a{
+                        padding: 5px 10px;
+                        box-shadow: none;
+                        width: 100%;
+                        text-align: center;
+                    }
+        
+                    span{
+                        width: 100%;
+                        text-align: center;
+                        padding: 5px 10px;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices landscape phones
+@media (min-width: 576px) {
+  
+    html{
+        font-size: 60%;
+    }
+    body{
+        padding-left: 0;
+    }
+    .container{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .employees{
+        grid-template-columns: repeat(1 , 1fr);
+        gap: 1rem;
+        min-height: auto;
+        padding: 6rem 0 3rem 0;
+    }
+    .person-card{
+        margin:0 auto;
+        border: 2px solid $color-cream;
+        height: 430px;
+        width: 350px;
+        box-shadow: rgba(0,0,0,0.6) 2px 2px 5px;
+
+        &-header{
+            height: 45%;
+        }
+    }
+
+    .about-me-header{
+        bottom: 3%;
+        right: 10px;
+
+        img{
+            width: 60px;
+        }
+        button{
+            font-size: 1.2rem;
+            width: 90px;
+            height: 25px;
+        }
+    }
+
+    .container{
+        .filter-content{
+            &.about-content{
+        
+                .about-h3{
+                    font-size: 1.6rem;
+                }
+        
+                .about-content-header{
+        
+                    .me{
+                        flex-direction: column;
+                        justify-content: center;
+                        margin: 3rem 0;
+        
+                        p{
+                            width: 100%;
+                            margin-bottom: 2rem;
+                        }
+        
+                        .my-image{
+                            width: 100%;
+        
+                            img{
+                                width: 100%;
+                                max-width: 500px;
+                                box-shadow: none;
+                            }
+                        }
+                        
+                    }
+                }
+        
+                .about-content-main{
+        
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+        
+                    .project-desc{ 
+                        width: 100%;
+                        ul{
+                            margin: 25px 0;
+                        }
+                        
+                        p{
+                            margin: 15px 0;
+                        }
+                        
+                    }
+        
+                    .project-technical-desc{
+                        width: 100%;
+        
+                        ul{
+                            padding-left: 30px;
+                        }
+                        p{
+                            margin: 15px 0;
+                        }
+                    
+                    }    
+                }
+        
+                .about-content-footer{
+                    margin-top: 35px;
+                    padding: 0;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: transparent;
+        
+                    a{
+                        padding: 5px 10px;
+                        box-shadow: none;
+                        width: 100%;
+                        text-align: center;
+                    }
+        
+                    span{
+                        width: 100%;
+                        text-align: center;
+                        padding: 5px 10px;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+ }
+// Tablets
+@media (min-width: 768px) {
+
+    html{
+        font-size: 61%;
+    }
+    .employees{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+// Large devices desktops
+@media (min-width: 992px) {
+    html{
+        font-size: 62.5%;
+    }
+    .container{
+        width: 95%;
+    }
+    .employees{
+        gap: 2rem;
+        min-height: 100vh;
+    }
+    .person-card{
+        box-shadow: rgba(0,0,0,0.6) 3px 3px 5px;
+
+        &-header{
+            height: 50%;
+        }
+    }
+
+}
+// X-Large devices large desktops
+@media (min-width: 1200px) {
+
+    body{
+        padding-left: $header-width;
+    }
+    .container{
+        width: 95%;
+        margin-top: 0;
+    }
+    header{
+
+        .header-filters{
+            display: none;
+        }
+    }
+    .employees{
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .person-card{
+
+        &:hover{
+            background-color: rgba($color-cream, $alpha: 1);
+        }
+    
+        &:hover .person-card-header{
+            overflow:visible;
+            box-shadow: none;
+        }
+    
+        &:hover .person-card-body{
+            transform: translateY(60%);
+            transition: all 1000ms;
+            transition-delay: 300ms;
+        }
+    }
+
+    .about-me-header{
+        bottom: 5%;
+        right: 15px;
+
+        img{
+            width: 100px;
+        }
+        button{
+            width: 150px;
+            height: 30px;
+        }
+
+        
+    }
+    
+    .container{
+        .filter-content{
+            &.about-content{
+
+                color: $color-grey;
+
+            .about-h3{
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.4);
+              
+            }
+
+            .about-content-header{
+
+                .me{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 3rem 0;
+                    
+
+                    p{
+                        width: 45%;
+                    }
+
+                    .my-image{
+                        width: 50%;
+                        text-align: center;
+
+                        img{
+                            width: 300px;
+                            border-radius: 15px;
+                            box-shadow: rgba($color: #000000, $alpha: 0.4) 3px 3px 8px;
+                        }
+                    }
+                    
+                }
+            }
+
+            .about-content-main{
+
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                .project-desc{ 
+                    width: 48%;
+                    ul{
+                        padding-left: 30px;
+                        margin: 10px 0;
+                        list-style-type:decimal;
+                        line-height: 24px;
+                    }
+                    
+                    p{
+                        margin: 10px 0;
+                    }
+                    
+                }
+
+                .project-technical-desc{
+                    display: inline-block;
+                    width: 48%;
+
+                    ul{
+                        padding-left: 30px;
+                    }
+                    p{
+                        margin: 10px 0;
+                    }
+                   
+                }    
+            }
+
+            .about-content-footer{
+                margin: 50px 0;
+                padding: 15px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                align-items: center;
+                background-color: rgba($color: $color-soil, $alpha: 0.4);
+
+                a{
+                    width: auto;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border-radius: 15px;
+                    padding: 7px 14px;
+                    color: $color-white;
+                    background-color: $color-grey;
+                    box-shadow: rgba($color: #000000, $alpha: 0.4) 2px 2px 5px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $color-soil;
+                        transition: all 300ms;
+                    }
+                }
+
+                span{
+                    width: auto;
+                    font-size: 2rem;
+                    border-radius: 15px;
+                    padding: 7px 14px;
+                    color: $color-white;
+                    background-color: $color-grey;
+                    box-shadow: rgba($color: #000000, $alpha: 0.4) 2px 2px 5px;
+
+                     &:hover{
+                        background-color: $color-soil;
+                        transition: all 300ms;
+                    }
+                }
+
+                i{
+                    margin-right: 10px;
+                }
+            }
+            }
+        }
+    }
+ 
+}
+// XX-Large devices larger desktops
+@media (min-width: 1400px) {
+
+    .container{
+        width: auto;
+        max-width: 1400px;
+    }
+
+    header{    
+        .header-filters{
+            display: block;
+        }
+    }
+
+    .employees{
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 3rem;
+    }
+}
+// Max. Large
+@media (min-width: 2200px) {
+
+    html{
+        font-size: 70%;
+    }
+    .container{
+        min-width: 1600px;
+    }
+    .employees{
+        grid-template-columns: repeat(4 , 1fr);
+        gap: 2rem;
+    }
+    .person-card{
+        height: 530px;
+        width: 370px;
+
+        &:hover .person-card-body{
+            transform: translateY(65%);
+            transition: all 1000ms;
+            transition-delay: 300ms;
+        }
+    }
+    .filter{
+        
+        &-search-emp{
+            height: 560px!important;
+        }
+        &-filter-emp{
+            height: 560px!important;
+        }
+        &-add-emp{
+            height: 560px!important;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+$main-text-color : #283739;
+$color-brown : #53331F;
+$color-pink : #CD8C8C;
+$color-soil :  #866C69;
+$color-cream : #D4B8B1;
+$color-white : #fcf8f3;
+$color-grey : #393e46;
+$warning-text : #45171d ;
+$warning-bg : bisque ;
+
+$header-width: 280px;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;  
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $main-text-color;
+    padding-left: $header-width;
+}

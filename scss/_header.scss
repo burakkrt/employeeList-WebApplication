@@ -1,0 +1,465 @@
+header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: $header-width;
+    padding: 3rem 0;
+   
+
+    .header{
+        &-nav{
+            height: 45%;
+            .navigation{
+                .nav{
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                    gap: 1rem;
+
+                    &-item{
+                        a{
+                            display: inline-block;
+                            width: 98%;
+                            height: 100%;
+                            font-size: 1.6rem;
+                            color: $color-white;
+                            background-color: $color-brown;
+                            padding: .7rem 0 .7rem 1.6rem;
+                            border-bottom-right-radius: 15px;
+                            box-shadow: rgba(0,0,0,0.6) 2px 2px 2px;
+                            letter-spacing: 1px ;
+                            text-decoration: none;
+                            cursor: pointer;
+
+                            &:hover{
+                                background-color: rgba($color: $color-brown, $alpha: .9);
+                            }
+
+                        }
+                        
+                        &.filter-header{
+                            display: none;
+                            
+                            a{
+                                i{
+                                    margin-right: 7px;
+                                }
+                            }
+
+                            @keyframes filterHeaderScale{
+                                from{
+                                    transform: scale(.5);
+                                }
+                                to{
+                                    transform: scale(1);
+                                }
+                            }
+                            &.active{
+                                display: block;
+                                animation: filterHeaderScale 200ms ease forwards;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-filters{
+            height: 55%;
+            position: relative;
+            background-color: $color-soil;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: rgba($color: $color-brown, $alpha: 1) 2px 2px 5px;
+           
+
+            .filter-menu{
+                
+                &-header{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-content: center;
+                        padding: .7rem 1.6rem .7rem 1.6rem;
+                        background-color: $color-brown;
+                        border-top-right-radius: 15px;
+
+                        #filter-menu{
+                            all: inherit;
+                            font-size: 1.7rem;
+                            color: $color-white;
+                            text-decoration: none;
+                            cursor: pointer;
+                            i{
+                                margin: auto 0;
+                                font-size: 1.7rem;
+                                margin-left: 1rem;
+                                &.active{
+                                    transform: rotate(90deg);
+                                    transition: all 300ms linear;
+                                }
+                                &.passive{
+                                    transform: inherit;
+                                    transition: all 300ms linear;
+                                }
+                            }
+
+                            &.pointer-events-none{
+                                pointer-events: none;
+                            }
+                        }
+
+                    }
+                &-body{          
+                    .filters-header-list{
+                        position: relative;
+                        .filter{
+                            position: absolute;
+                            width: 97%;
+                            left: -101%;
+                            padding: .7rem 0 .7rem 1.6rem;
+                            color: $color-white;
+                            background-color: $color-brown;
+                            border-left: 1.5rem solid $color-cream;
+                            box-shadow: rgba(0,0,0,0.8) 0 3px 6px;
+                            border-bottom-right-radius: 3px;
+                            border-top-right-radius: 3px;
+                            pointer-events:none;
+                            
+                            i{
+                                margin-right: 1rem;
+                            }
+                            @keyframes filtersForward{
+                                from{
+                                    left: -101%;
+                                    
+                                }
+                                50%{
+                                    left: 10%;
+                                }
+                                100%{
+                                    left: 0;
+                                    pointer-events:visible;
+                                    cursor: pointer;
+                                }
+                            }
+                            @keyframes filtersBackward{
+                                from{
+                                    left: 0%;
+                                    pointer-events:none;
+                                }
+                                50%{
+                                    left: 10%;
+                                }
+                                100%{
+                                    left: -101%;
+                                }
+                            }
+                            &#search-emp{
+                                top: 4rem;
+                                &.active{
+                                    animation: filtersForward 800ms ease-in-out forwards;
+                                }
+                                &.passive{
+                                    animation: filtersBackward 500ms linear forwards;
+                                }
+                            }
+                            &#filter-emp{
+                                top: 9.3rem;
+                                &.active{
+                                    animation: filtersForward 950ms ease-in-out forwards;
+                                }
+                                &.passive{
+                                    animation: filtersBackward 600ms linear forwards;
+                                }
+                            }
+                            &#edit-emp{
+                                top: 14.6rem;
+                                &.active{
+                                    animation: filtersForward 1100ms ease-in-out forwards;
+                                }
+                                &.passive{
+                                    animation: filtersBackward 700ms linear forwards;
+                                }
+                            }
+                            &#add-emp{
+                                top: 19.9rem;
+                                &.active{
+                                    animation: filtersForward 1250ms ease-in-out forwards;
+                                }
+                                &.passive{
+                                    animation: filtersBackward 800ms linear forwards;
+                                }
+                            }
+                            &#delete-emp{
+                                top: 25.2rem;
+                                &.active{
+                                    animation: filtersForward 1400ms ease-in-out forwards;
+                                }
+                                &.passive{
+                                    animation: filtersBackward 900ms linear forwards;
+                                }
+                            }
+                        }
+                    }
+                    .filter{
+                        
+                        @keyframes filterScale{
+                            from{
+                                transform: scale(.5);
+                            }
+                            to{
+                                transform: scale(1);
+                            }
+                        }                        
+                        &-search-emp{
+                            overflow: hidden;
+                            height: 460px;
+                            display: none;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            transform: scale(.5);
+   
+                            //Forms
+                            .form-filters{
+
+                                .filter-text{
+                                    width: 100%;
+                                    margin : 5px 0;
+                                }
+                                .filter-button{
+                                    width: 100%;
+                                    margin: 1.7rem 0 0 0;
+                                    display: block;
+                                }
+                            }
+                            &.active{
+                                display: flex;
+                                animation: filterScale 500ms forwards;
+                            }
+                        }
+                        &-filter-emp{
+                            overflow: hidden;
+                            height: 460px;
+                            display: none;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: flex-end;
+                            gap: 1rem;
+
+                            //Public
+                            .for-filter{
+                                display: flex;
+                                flex-direction: column;
+                              
+                                form{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 1.5rem;
+
+                                    //Başlıklar
+                                    .for-header{
+                                        font-size: 1.8rem;
+                                        font-weight: 500;
+                                        color:$color-white;
+                                        padding-bottom: 1rem;
+                                        border-bottom: 1px solid $color-cream;
+                                    }
+                                    //Küçüktür ve büyüktür
+                                    .little, .big{
+                                        display: flex;
+                                        justify-content: flex-start;
+
+                                        label{
+                                            width: 50%;
+                                        }
+                                        input{
+                                            width: 50%;
+                                        }
+                                    }
+                                    .filter-button{
+                                        margin : 0;
+                                    }
+                                }
+                            }
+
+                            &.active{
+                                display: flex;
+                                animation: filterScale 500ms forwards;
+                            }
+                        }
+                        &-edit-emp{
+
+                            &.active{
+                                display: flex;
+                                animation: filterScale 500ms forwards;
+                            }
+                        }
+                        &-add-emp{
+                            overflow: hidden;
+                            height: 460px;
+                            display: none;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: flex-end;
+                            transform: scale(.5);
+
+                             //Forms
+                             .form-filters{
+                                width: 100%;
+
+                                .filter-label{
+                                    
+                                }
+                                .filter-text{
+                                    margin-left: .5rem;
+
+                                    &.warning-error-border{
+                                        &:focus{
+                                            position: relative;
+                                            transform: scale(.9);
+                                            outline: 2px solid red;
+                                            border: 2px solid transparent;
+                                        }
+                                    }     
+                                }
+                                .filter-button{
+                                    position: relative;
+                                    transform: translateX(-55%);
+                                    left: 50%;
+                                }
+                                .col-2-inputs{
+                                    position: relative;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin: 1rem 0;
+
+                                    .male-flame-content{
+                                        width: 170px;
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        padding-right: 4px;
+                                    }
+                                    .male-flame{
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: flex-start;
+                                        align-items: center;
+
+                                        input{
+                                            margin-left: 1rem;
+                                        }
+                                        i{
+                                            cursor: pointer;
+                                            margin-left: .5rem;
+                                            color: $color-white;
+                                            
+                                            &:hover{
+                                                color: #7dd87d;
+                                                transition: color 300ms ease;
+                                                animation: refleshMaleFlame 300ms linear 1;
+                                            }
+                                            &:active{
+                                                color: black;
+                                            }
+                                            @keyframes refleshMaleFlame{
+                                                from{
+                                                    transform: rotate(0deg);
+                                                }
+                                                to{
+                                                    transform: rotate(360deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    input{
+                                        width: 170px;
+                                    }
+                                    // select style
+                                    select{
+                                        margin-left: .5rem;
+                                        width: 170px;
+                                        height: 23px;
+                                        padding-left: .5rem;
+                                        border-radius: 15px;
+                                        background-color: $color-cream;
+                                        color: $warning-text;
+                                        border-width: 2px;
+                                        border-style: inset;
+                                        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+                                        border-image: initial;
+                                        height: 29px;
+
+                                        option{
+                                            color: $warning-text;
+                                            background-color: $color-cream;
+                                        }
+
+                                    }
+                                    // checkbox style
+                                    input[type="checkbox"]{
+                                        width: 2rem;
+                                        height: 3rem;
+                                    }
+                                }
+                                           
+                            }
+
+                            &.active{
+                                display: flex;
+                                animation: filterScale 500ms forwards;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.mobile-menu{
+        z-index: 1;
+        height: auto;
+        width: 100%;
+        height: 1;
+        padding: 1rem 0;
+        background-color: rgba($color: $color-brown, $alpha: .7);
+
+        .header{
+            &-nav{
+                height: 100%;
+                .navigation{
+                    .nav{
+                        display: none;
+
+                        a{
+                            text-align: center;
+                            width: 100%;
+                            border-bottom-right-radius: 0px;
+                        }
+
+                        &.mobile-menu-active{
+                            margin-top: 1rem;
+                            display: flex;
+                        }
+                        &.mobile-menu-passive{
+                            display: none;
+                        }
+
+                        
+                    }
+                }
+                
+                .mobile-button-div{
+                    display: flex;
+                }
+            }
+            &-filters{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Employee List</title>
+</head>
+<body>
+<header class="">
+    <div class="header-nav">
+        <div class="mobile-button-div">
+            <button type="button" id="mobile-menu-button">Menu</button>
+        </div>
+        <nav class="navigation">
+            <ul class="nav">
+                <li class="nav-item"><a href="#menagers"><i class="fa-solid fa-terminal"></i>Menagers</a></li>
+                <li class="nav-item"><a href="#assistant-menagers"><i class="fa-solid fa-terminal"></i>Assistant Menagers</a></li>
+                <li class="nav-item"><a href="#management-department"><i class="fa-solid fa-terminal"></i>Management Department</a></li>
+                <li class="nav-item"><a href="#production-department"><i class="fa-solid fa-terminal"></i>Production Department</a></li>
+                <li class="nav-item"><a href="#marketing-department"><i class="fa-solid fa-terminal"></i>Marketing Department</a></li>
+                <li class="nav-item"><a href="#accounting-department"><i class="fa-solid fa-terminal"></i>Accounting Department</a></li>
+                <li class="nav-item"><a href="#human-resources-department"><i class="fa-solid fa-terminal"></i>Human Resources Department</a></li>
+                <li class="nav-item"><a href="#ar-ge-department"><i class="fa-solid fa-terminal"></i>AR-GE Department</a></li>
+                <li class="nav-item filter-header"><a href="#filters-content"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-filters">
+        <div class="filter-menu-header">
+            <button type="button" id="filter-menu">Filter Menu<i class="fa-solid fa-bars passive"></i></button>
+            <i class="fa-regular fa-hand-pointer" id="welcome-sing"></i>
+        </div>
+        <div class="filter-menu-body">
+            <div class="filters-header-list">
+                <a class="filter" id="search-emp"><i class="fa-solid fa-magnifying-glass"></i>Search for employees</a>
+                <a class="filter" id="filter-emp"><i class="fa-solid fa-arrow-down-wide-short"></i>Filter employees</a>
+                <a class="filter" id="edit-emp"><i class="fa-solid fa-pen-to-square"></i>Edit or Delete employees</a>
+                <a class="filter" id="add-emp"><i class="fa-solid fa-user-plus"></i>Add employee</a>
+            </div>
+            <div class="filter-search-emp">
+                <span class="warning-error" id="warning-message-search-emp"><i class="fa-solid fa-circle-exclamation"></i></span>
+                <form class="form-filters">
+                    <div class="full-name">
+                        <label class="filter-label" for="search-emp-name">Full name :</label>
+                        <input class="filter-text" type="text" name="search-emp-name" id="search-emp-name">
+                    </div>
+                    <div class="e-mail">
+                        <label class="filter-label" for="search-emp-email">or e-mail address :</label>
+                        <input class="filter-text" type="text" name="search-emp-email" id="search-emp-email">
+                    </div>
+                    <div class="button">
+                        <button class="filter-button" type="button" id="search-emp-button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="filter-filter-emp">
+                <span class="warning-error" id="warning-message-filter-score"><i class="fa-solid fa-circle-exclamation"></i></span>
+                <div class="for-filter">
+                    <form class="form-filters" id="for-score-form">
+                        <h3 class="for-header">Filter by score</h3>
+                        
+                        <div class="little">
+                            <label class="filter-label" for="smaller-than">The little one</label>
+                            <input class="filter-text" type="text" class="filter" id="filter-score-little">
+                        </div>
+
+                        <div class="big">
+                            <label class="filter-label" for="greater-than">The big one</label>
+                            <input class="filter-text" type="text" class="filter" id="filter-score-big">
+                        </div>
+
+                        <button class="filter-button" type="button" id="filter-score-button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                    </form>
+                </div>
+                <div class="for-filter" id="for-operation-time-form">
+                    <span class="warning-error" id="warning-message-option-time"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <form class="form-filters" id="for-option-time-form">
+                        <h3 class="for-header">Filter by Operation Time</h3>
+                        
+                        <div class="little">
+                            <label class="filter-label" for="smaller-than">The little one</label>
+                            <input class="filter-text" type="text" class="filter" id="filter-option-time-little">
+                        </div>
+
+                        <div class="big">
+                            <label class="filter-label" for="greater-than">The big one</label>
+                            <input class="filter-text" type="text" class="filter" id="filter-option-time-big">
+                        </div>
+
+                        <button class="filter-button" type="button" id="filter-option-time-button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="filter-edit-emp"></div>
+            <div class="filter-add-emp">
+                <span class="warning-error" id="warning-message-add-employee"><i class="fa-solid fa-circle-exclamation"></i></span>
+                <div class="for-filter">
+                    <form class="form-filters" id="for-add-form">
+                        
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-full-name">Full Name :</label>
+                            <input class="filter-text" type="text" id="add-full-name" placeholder="Name Surname" oninput="previewName()">
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-year-birth">Year Birth :</label>
+                            <input class="filter-text" type="text" id="add-year-birth" placeholder="1997" oninput="previewYearBirth()">
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-mail">Mail :</label>
+                            <input class="filter-text" type="text" id="add-mail" placeholder="employee@mail.com" oninput="previewMail()">
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-mail">Start Job :</label>
+                            <input class="filter-text" type="text" id="add-start-job" placeholder="2022" oninput="previewStartJob()">
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-score">Score :</label>
+                            <input class="filter-text" type="text" id="add-score" placeholder="Max. 10" oninput="previewScore()">
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-salary">Salary :</label>
+                            <input class="filter-text" type="text" id="add-salary" placeholder="1500">
+                        </div>
+
+                        <div class="col-2-inputs" >
+                            <label class="filter-label" for="add-departman">Departman :</label>
+                            <select name="add-departman" id="add-departman" >
+                                <option value="null" selected disabled hidden>Select Department</option>
+                            </select>
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-position">Position :</label>
+                            <select name="add-departman" id="add-position" oninput="previewPosition()">
+                                <option value="null" selected disabled hidden id="default-select-department"></option>
+                            </select>
+                        </div>
+
+                        <div class="col-2-inputs">
+                            <label class="filter-label" for="add-position">Gender :</label>
+                            <div class="male-flame-content">
+                                <div class="male-flame" id="add-male-content">
+                                    <label class="filter-label" for="add-position">Male</label>
+                                    <input type="checkbox" id="add-male" name="male" value="male">
+                                </div>
+                                <div class="male-flame" id="add-flame-content">
+                                    <label class="filter-label" for="add-position">Flame</label>
+                                    <input type="checkbox" id="add-flame" name="flame" value="flame">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <button class="filter-button" type="button" id="add-employee-button"><i class="fa-solid fa-user-plus"></i>Add Employee</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="about-me-header">
+        <img src="assets/img/about-me.png" alt="">
+        <button type="button" id="about-me-button">ABOUT ME</button>
+    </div>
+   <div class="container">
+    <section class="employees" id="menagers"></section>
+    <section class="employees" id="assistant-menagers"></section>
+    <section class="employees" id="management-department"></section>
+    <section class="employees" id="production-department"></section>
+    <section class="employees" id="marketing-department"></section>
+    <section class="employees" id="accounting-department"></section>
+    <section class="employees" id="human-resources-department"></section>
+    <section class="employees" id="ar-ge-department"></section>
+    <section class="filter-content" id="filters-content"></section>
+   </div>
+</main>
+
+<script src="assets/js/employees.js"></script>
+<script src="assets/js/filters.js"></script>
+<script src="assets/js/smoothScrool.js"></script>
+</body>
+</html>

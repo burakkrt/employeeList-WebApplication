@@ -1,0 +1,513 @@
+.container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.employees{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 1rem;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.person-card{
+    overflow: hidden;
+    border: 2px solid $color-cream;
+    height: 450px;
+    width: 350px;
+    box-shadow: rgba(0,0,0,0.6) 3px 3px 5px;
+
+    &-header{
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        background-color: $color-cream;
+        box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+        img{
+            width: 100%;
+        }
+    }
+
+    &-body{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        background-color: $color-white;
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .name{
+                color: $color-soil;
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+            .job{
+                color: $color-brown;
+                font-size: 1.7rem;
+            }
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: $color-brown;
+        } 
+    }
+}
+
+.person-card-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    padding: 0rem 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.6) 2px 2px 7px;
+    border: 1px solid $color-soil;
+    background-color: $color-cream;
+    color: $color-grey;
+
+    &-image{
+        overflow: hidden;
+        position: relative;
+        width: 150px;
+
+        img{
+            position: absolute;
+            width: 150px;
+        }
+    }
+
+    &-content{
+        position: relative;
+        width: 80%;
+        height: 100px;
+        transform: translateY(-50%);
+        top: 50%;
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+
+            .person-edit{
+
+                button{
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    padding: .5rem 1rem;
+                    border-radius: 15px;
+                    background-color: $color-brown;
+                    color: $color-white;
+                    border: none;
+
+                    i{
+                        margin-right: .5rem;
+                    }
+
+                    &.deleteYes{
+                        i{
+                            color: #7dd87d;
+                        }
+                        
+                    }
+                    
+                    &.deleteCancel{
+
+                        i{
+                            color: #ff847c;
+                        } 
+                    }
+                }
+
+                &.save{
+
+                    button:first-child{
+
+                        i{
+                            color: #7dd87d;
+                        }
+                    }
+
+                    button:last-child{
+
+                        i{
+                            color:#ff847c;
+                        }
+                    }
+                }
+                
+                span{
+                    font-size: 1.7rem;
+                    margin-right: .5rem;
+                    padding: .5rem 1rem;
+                    border-radius: 15rem;
+                    color:$color-brown;
+                    background-color: rgba(255,0,0,0.3);
+                }
+            }
+        }
+
+        &-desc{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+
+            span{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 1.8rem;
+                flex-grow: 1;
+
+                strong{
+                    margin-right: .5rem;
+                }
+
+                a{
+                    cursor: pointer;
+                    i{
+                        
+                        &.edit{
+                            margin-right: .5rem;
+                            color:red;
+                        }
+
+                    }
+                    &.passive{
+                        pointer-events: none;
+                        opacity: .5;
+                    }
+                }
+                
+                input{
+                    font-size: 1.5rem;
+                    margin: 0 .5rem;
+                    padding: 4px 12px;
+                    border-radius: 13px;
+                    background-color: $color-soil;
+                    color: $color-white;
+                    outline: none;
+
+                    &::placeholder{
+                        color: rgba(255,255,255,0.6)
+                    }
+                }
+
+                &.passive{
+                    pointer-events: none;
+                    opacity: .5;
+                }
+                //New edit
+                b{
+                    color: red;
+                }
+            }
+        }
+    }
+
+    &.focus-card{
+        background-color: $color-pink;
+    }
+
+    &.no-focus-card{
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+//Search employe result person-card
+.filter-content .person-card{
+    width: 600px;
+    height: 700px;
+
+    &-header{
+
+        height: 60%;
+    }
+
+    &-body{
+
+        height: 40%;
+        .header{
+            .name{
+                font-size: 4rem;
+            }
+            .job{
+                font-size: 2rem;
+            }
+        }
+        .footer{
+            font-size: 2rem;
+        } 
+    }
+}
+
+//Forms
+.form-filters{
+    padding: 10px;
+
+    .filter-label{
+        color: $color-white;
+    }
+
+    .filter-text{
+        font-size: 1.5rem;
+        padding: 4px 12px;
+        border-radius: 13px;
+        background-color: $color-cream;
+        color: $color-grey;
+    }
+
+    .filter-button{
+        min-width: 180px;
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 13px;
+        color : $color-grey;
+        border: 2px solid $color-brown;
+        background-color: $color-cream;
+        box-shadow: rgba(0,0,0,0.3) 1px 2px 4px;
+        cursor: pointer;
+        transition: all 300ms;
+
+        &:hover{
+            color: $color-white!important;
+            background-color: rgba($color-brown, $alpha: 0.6)!important;
+            border: 2px solid $color-cream;
+        }
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+
+//Warning message
+.warning-error{
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $warning-text;
+    background-color: $warning-bg;
+    pointer-events: none;
+    top: -30%;
+    i{
+        color: $color-brown;
+        margin-right: 4px;
+    }
+
+    @keyframes errorForwards143{
+        from{
+            top: -30%;
+        }
+        to {
+            top: 0%;
+        }
+    }
+    @keyframes errorBackwards143{
+        from{
+            top: 0%;
+        }
+        to {
+            top: -30%;
+        }
+    }
+
+    &.passive{
+        animation: errorBackwards143 600ms ease forwards;
+    }
+    &.active{
+        animation: errorForwards143 300ms ease forwards;
+    }
+    &.success{
+        background-color: #7dd87d;
+    }
+    &.error{
+        background-color: #ff847c;
+    }
+}
+//Warning message 2
+.warning-error-2{
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    right: -80%;
+    top: 0;
+    color: $warning-text;
+    background-color: $warning-bg;
+    pointer-events: none;
+    
+    i{
+        color: $color-brown;
+        margin-right: 4px;
+    }
+
+    @keyframes errorForwards2{
+        from{
+            right: -80%;
+        }
+        to {
+            right: 0;
+        }
+    }
+    @keyframes errorBackwards2{
+        from{
+            right: 0;
+        }
+        to {
+            right: -80%;
+        }
+    }
+
+    &.passive{
+        animation: errorBackwards2 400ms ease forwards;
+    }
+    &.active{
+        animation: errorForwards2 400ms ease forwards;
+    }
+    &.success{
+        background-color: #7dd87d;
+    }
+    &.error{
+        background-color: #ff847c;
+    }
+}
+
+.text-focus{
+    color: red!important;
+    font-weight: bold;
+}
+
+//pointer events none
+.filter-button-please-wait{
+    pointer-events:none;
+    color: $color-white!important;
+    background-color: rgba($color-brown, $alpha: 0.6)!important;
+    border: 2px solid $color-cream!important;
+    
+    @keyframes rotateIcon12{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    i{
+        animation: rotateIcon12 900ms linear infinite;
+    }
+}
+
+// person edit, cancel, save hover
+.person-edit{
+
+    button{
+        transition: all 200ms ease-out;
+        &:hover{
+          
+            background-color: rgba($color-brown, $alpha: 0.7);
+        }
+    }
+}
+
+.all-employees-view{
+    float: right;
+    margin: .5rem 0;
+    padding: 5px 10px;
+    border-radius: 7px;
+    color:$color-white;
+    background-color: $color-brown;
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    i{
+        color: #7dd87d;
+        margin-right: 6px;
+    }
+
+    .text-focus-criteria{
+        color: #7dd87d;
+    }
+}
+
+// mobile menu button div class
+.mobile-button-div{
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+//Mobile menu button
+#mobile-menu-button{
+    padding: .5rem 1rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+//About me
+.about-me-header{
+    z-index: 2;
+    position: fixed;
+    bottom: 5%;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+
+    img{
+        width: 100px;
+        margin: 0 auto;
+    }
+    button{
+        width: 150px;
+        height: 30px;
+        border-radius: 13px;
+        color: $color-white;
+        background-color: $color-brown;
+        border: 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-soil;
+        }
+    }
+
+    
+}
+
+// Açılışta menü click işaretçisi
+#welcome-sing{
+
+    position: absolute;
+    transform: translate(-4px,45px);
+    font-size: 3.5rem;
+    color: rgba($color: $color-white, $alpha: 0.8);
+    animation: welcomeSing 2000ms ease  20000ms infinite alternate;
+    opacity: 0;
+
+    @keyframes welcomeSing {
+        from{
+            transform: translate(-4px,55px);
+            opacity: 1;
+        }
+        to{
+            transform: translate(-4px,30px);
+            opacity: 1;
+        }
+    }
+}

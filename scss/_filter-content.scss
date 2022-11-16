@@ -1,0 +1,261 @@
+.container{
+
+    .filter-content{
+        position: relative;
+        display: none; 
+        width: 100%;
+        min-height: 100vh;
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+
+        @keyframes filterContentAnimation{
+            form{
+                transform: scale(.9);
+                opacity: .7;
+            }
+            to{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        &.active{
+            display: block;
+        }
+
+        &.not-founds{
+            
+            &.not-search-employees{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                @keyframes notFounds{
+                    from{
+                        transform: scale(.1);
+                    }
+                    to{
+                        transform: scale(1);
+                    }
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3rem;
+                    transform: scale(.1);
+                    animation: notFounds 200ms linear forwards;
+
+                    .header{
+                        font-size: 8rem;
+                        letter-spacing: .6rem;
+                    }
+
+                    .desc{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        &.search-employe-result{
+            display: flex!important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: scale(.9);
+            opacity: .7;
+            animation: filterContentAnimation 300ms linear forwards;
+        }
+
+        &.filter-option-score{
+            opacity: .7;
+            transform: scale(.9);
+            animation: filterContentAnimation 300ms linear forwards;
+            .person-card-horizontal{
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &.edit-employees{
+
+            .for-filter{
+                overflow: hidden;
+                position: relative;
+                padding-top: 3rem;
+                margin-bottom: 1rem;
+
+
+                .form-filters{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    label{
+                        margin-right: .5rem;
+                        color: $color-grey;
+                    }
+                }
+            }
+            
+            .person-card-horizontal{
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &.filter-employees{
+
+            .for-filter{
+                overflow: hidden;
+                position: relative;
+                padding-top: 3rem;
+                margin-bottom: 1rem;
+
+
+                .form-filters{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    label{
+                        margin-right: .5rem;
+                        color: $color-grey;
+                    }
+                }
+            }
+            
+            .person-card-horizontal{
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        &.add-employees{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.about-content{
+
+            color: $color-grey;
+
+            .about-h3{
+                font-size: 2rem;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.4);
+              
+            }
+
+            .about-content-header{
+
+                .me{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 3rem 0;
+                    
+
+                    p{
+                        width: 45%;
+                    }
+
+                    .my-image{
+                        width: 50%;
+                        text-align: center;
+
+                        img{
+                            width: 300px;
+                            border-radius: 15px;
+                            box-shadow: rgba($color: #000000, $alpha: 0.4) 3px 3px 8px;
+                        }
+                    }
+                    
+                }
+            }
+
+            .about-content-main{
+
+                display: flex;
+                justify-content: space-between;
+
+                .project-desc{ 
+                    width: 48%;
+                    ul{
+                        padding-left: 30px;
+                        margin: 10px 0;
+                        list-style-type:decimal;
+                        line-height: 24px;
+                    }
+                    
+                    p{
+                        margin: 10px 0;
+                    }
+                    
+                }
+
+                .project-technical-desc{
+                    display: inline-block;
+                    width: 48%;
+
+                    ul{
+                        padding-left: 30px;
+                    }
+                    p{
+                        margin: 10px 0;
+                    }
+                   
+                }    
+            }
+
+            .about-content-footer{
+                margin: 50px 0;
+                padding: 15px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                align-items: center;
+                background-color: rgba($color: $color-soil, $alpha: 0.4);
+
+                a{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    border-radius: 15px;
+                    padding: 7px 14px;
+                    color: $color-white;
+                    background-color: $color-grey;
+                    box-shadow: rgba($color: #000000, $alpha: 0.4) 2px 2px 5px;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $color-soil;
+                        transition: all 300ms;
+                    }
+                }
+
+                span{
+                    font-size: 2rem;
+                    border-radius: 15px;
+                    padding: 7px 14px;
+                    color: $color-white;
+                    background-color: $color-grey;
+                    box-shadow: rgba($color: #000000, $alpha: 0.4) 2px 2px 5px;
+
+                     &:hover{
+                        background-color: $color-soil;
+                        transition: all 300ms;
+                    }
+                }
+
+                i{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
