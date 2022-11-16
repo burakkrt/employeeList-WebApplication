@@ -16,7 +16,7 @@ header{
                     display: flex;
                     flex-direction: column;
                     list-style-type: none;
-                    gap: 1rem;
+                    gap: 3px;
 
                     &-item{
                         a{
@@ -241,7 +241,7 @@ header{
                         }
                         &-filter-emp{
                             overflow: hidden;
-                            height: 460px;
+                            margin-top: 20px;
                             display: none;
                             flex-direction: column;
                             align-items: center;
