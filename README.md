@@ -17,11 +17,6 @@ Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygula
 
 ### Live : [Employee List Website](https://employee-list12.netlify.app)
 
-## Projeden Görüntüler
-![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
-![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
-![QuizBox Projesinden Bir Görüntü](screenshootApp2.png)
-
 ## Kullanılan Teknolojiler
 - HTML
 - CSS `(SCSS)`
@@ -32,6 +27,11 @@ Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygula
 - [W3School](https://www.w3schools.com)
 - [Colorhunt](https://colorhunt.co)
 - [Stackoverflow](https://stackoverflow.com)
+
+## Projeden Görüntüler
+![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
+![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
+![QuizBox Projesinden Bir Görüntü](screenshootApp2.png)
 
 ## License
 - #### MIT
