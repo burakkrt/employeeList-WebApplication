@@ -24,9 +24,10 @@ Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygula
 - [Bootstrap](https://getbootstrap.com)
 
 ## Projeden Görüntüler
-![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
-![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
-![QuizBox Projesinden Bir Görüntü](screenshootApp2.png)
+![screenshootApp0](https://user-images.githubusercontent.com/99482906/202315027-d6d88d2c-1ddf-4278-a5da-1da1c6e10421.png)
+![screenshootApp1](https://user-images.githubusercontent.com/99482906/202315036-9c98634a-85b4-4155-b5ea-34f60114a9a9.png)
+![screenshootApp2](https://user-images.githubusercontent.com/99482906/202315043-c655b785-ec77-4a35-af81-2d5d66cbe493.png)
+
 
 ## Yardımcı Kaynaklar
 - [W3School](https://www.w3schools.com)
