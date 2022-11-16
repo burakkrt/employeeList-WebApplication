@@ -8,6 +8,7 @@ bulunan Javascript tabanlı bir web uygulaması.
 ## Projeden Görüntüler
 ![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
 ![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
+![QuizBox Projesinden Bir Görüntü](screenshootApp2.png)
 ## Kullanılan Teknolojiler
 - HTML
 - CSS
