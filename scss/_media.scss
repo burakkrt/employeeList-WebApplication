@@ -318,24 +318,6 @@
         padding: 3rem 0;
     }
 
-    .person-card{
-
-        &:hover{
-            background-color: rgba($color-cream, $alpha: 1);
-        }
-    
-        &:hover .person-card-header{
-            overflow:visible;
-            box-shadow: none;
-        }
-    
-        &:hover .person-card-body{
-            transform: translateY(60%);
-            transition: all 1000ms;
-            transition-delay: 300ms;
-        }
-    }
-
     .about-me-header{
         bottom: 5%;
         right: 15px;
@@ -511,16 +493,7 @@
         grid-template-columns: repeat(4 , 1fr);
         gap: 2rem;
     }
-    .person-card{
-        height: 530px;
-        width: 370px;
 
-        &:hover .person-card-body{
-            transform: translateY(65%);
-            transition: all 1000ms;
-            transition-delay: 300ms;
-        }
-    }
     .filter{
         
         &-search-emp{
