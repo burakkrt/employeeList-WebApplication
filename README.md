@@ -15,7 +15,7 @@ Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygula
 - Etkileşimler arası slow geçişler,
 - Toprak renk paleti kullanılmıştır. (#53331F, #CD8C8C, #866C69, #D4B8B1)
 
-### Live : [Employee List Website](https://employee-list12.netlify.app)
+### Live : [Employee List Website](https://employeelist12.netlify.app)
 
 ## Kullanılan Teknolojiler
 - HTML
