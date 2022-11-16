@@ -1,11 +1,12 @@
 # #Employee List
 
 ## Proje Tanımı
-Firmaların departmanları ve bu departmanlara bağlı tüm çalışanların listelendiği Javascript tabanlı web uygulaması.
-Bu projede ağırlıklı olarak toprak renkleri kullanılsa da görsellikten ziyade işlevsellik üzerine çalışmalar yapılmıştır.
-Constructor yapısı ile türetilen objeler çalışanları oluşturmakta ve bu constructor ın protatype ına eklenen fonksiyonlar
-sayesinde kod tekrarından kaçınılmıştır. Herhangi bir veritabanına bağlı olmadan ve javascript kütüphanesi kullanılmadan
-oluşturulan bu projenin CSS dosyları SCSS ile hazırlanmıştır.
+Firmaların departmanları ve bu departmanlara bağlı tüm çalışanların listelendiği bir uygulama. Veritabanı kullanılmadan
+javascript tabanlı olan Employe List 'de tüm çalışanları görüntüleyebilir, yeni çalışan ekleyebilir veya mevcut bir çalışanın
+bilgilerini düzenleyebiliriz.
+### Proje Amacı
+Constructor yapısı ile OOP tekniği kullanılarak ve çeşitli (çalışan yaşı, firmada çalışma süresi) fonksiyonları prototype ekleyerek
+düzenlenebilir, eklenebilir veya çıkartılabilir temiz kod yazımını geliştirmektir.
 
 ##
 
