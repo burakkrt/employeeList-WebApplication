@@ -11,11 +11,11 @@ düzenlenebilir, eklenebilir veya çıkartılabilir temiz kod yazımını geliş
 Projede görsel estetikten ziyade işlevsellik ön planda tutulmuş olup, uygulama izlenimi kazandırılması adına ;
 - Yuvarlatılmış kenar (border-radius) ağırlıklı,
 - Etkileşimler arası slow geçişler,
-- Toprak renkleri kullanılmıştır.
-
+- Toprak renkleri kullanılmıştır. (#53331F, #CD8C8C, #866C69, #D4B8B1)
+### Live : [QuizBoxWebsite](https://employee-list12.netlify.app)
 > Bu projede **Object Oriented Programming (OOP)** tekniği kullanılmıştır.
 > OOP tekniğini geliştirmek amacı ile proje oluşturulmuştur.
-### Live : [QuizBoxWebsite](https://quizbox12.netlify.app)
+
 ## Projeden Görüntüler
 ![QuizBox Projesinden Bir Görüntü](screenshootApp0.png)
 ![QuizBox Projesinden Bir Görüntü](screenshootApp1.png)
