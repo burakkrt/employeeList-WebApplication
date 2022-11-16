@@ -1,7 +1,14 @@
-# #Quiz Box
-## Uygulama Tanımı
-Web tabanlı sorular çözüp kullanıcıların kendilerini sınayabileceği 4 şık cevap seçeneği ve 10 saniye soru çözme süresi
-bulunan Javascript tabanlı bir web uygulaması.
+# #Employee List
+
+## Proje Tanımı
+Firmaların departmanları ve bu departmanlara bağlı tüm çalışanların listelendiği Javascript tabanlı web uygulaması.
+Bu projede ağırlıklı olarak toprak renkleri kullanılsa da görsellikten ziyade işlevsellik üzerine çalışmalar yapılmıştır.
+Constructor yapısı ile türetilen objeler çalışanları oluşturmakta ve bu constructor ın protatype ına eklenen fonksiyonlar
+sayesinde kod tekrarından kaçınılmıştır. Herhangi bir veritabanına bağlı olmadan ve javascript kütüphanesi kullanılmadan
+oluşturulan bu projenin CSS dosyları SCSS ile hazırlanmıştır.
+
+##
+
 > Bu projede **Object Oriented Programming (OOP)** tekniği kullanılmıştır.
 > OOP tekniğini geliştirmek amacı ile proje oluşturulmuştur.
 ### Live : [QuizBoxWebsite](https://quizbox12.netlify.app)
